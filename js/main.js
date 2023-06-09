@@ -10,12 +10,23 @@ const swiper = new Swiper(".swiper", {
   // direction: 'vertical',
   loop: true,
   // количество картинок на странице и расстояние между ними
-  slidesPerView: 2,
-  spaceBetween: 20,
+//   перенесли на адаптиве
+//   slidesPerView: 2,
+//   spaceBetween: 20,
   navigation: {
     nextEl: ".swiper-button-right",
     prevEl: ".swiper-button-left",
   },
+  breakpoints: {
+    0: {
+        slidesPerView: 1,
+    },
+    // будет работать при > чем 768
+    768: {
+        slidesPerView: 2,
+        spaceBetween: 20, 
+    }
+  }
 });
 
 let map;
